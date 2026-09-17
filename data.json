@@ -541,5 +541,17 @@
     ],
     "price": "35",
     "description": "Dimension Roaming Pack "
+  },
+  {
+    "file": "000039.jpg",
+    "title": "Arlecchino",
+    "cat": "Card",
+    "tags": [
+      "Game",
+      "Genshin Impact",
+      "Chix"
+    ],
+    "price": "30",
+    "description": "Dimension Roaming Pack "
   }
 ]
