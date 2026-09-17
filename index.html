@@ -8,9 +8,67 @@
 </head>
 <body>
   <main class="container">
-    <div class="eyebrow">ADMIN UPLOADER</div>
-    <h1>Add Image</h1>
-    <p class="muted">Upload, rename, and save an image to your repository.</p>
+    <div class="row-between top-row">
+      <div>
+        <div class="eyebrow">ADMIN UPLOADER</div>
+        <h1>Add Image</h1>
+        <p class="muted">Upload, rename, and save an image to your repository.</p>
+      </div>
+      <button type="button" id="settingsBtn" class="secondary settings-btn" title="GitHub settings">⚙ Settings</button>
+    </div>
+
+    <div id="settingsPanel" class="settings-panel" hidden>
+      <h2>GitHub connection</h2>
+      <p class="muted small-note">
+        Your token is stored only in this browser's local storage and is sent directly to
+        <code>api.github.com</code>. It needs the <code>repo</code> scope on a classic token
+        (or Contents: Read/write on a fine-grained token) for both repositories below.
+      </p>
+
+      <label>Personal Access Token
+        <input id="ghToken" type="password" placeholder="ghp_...">
+      </label>
+
+      <div class="settings-grid">
+        <div class="settings-col">
+          <h3>Image repository</h3>
+          <label>Owner
+            <input id="imageOwner" placeholder="reireis0033">
+          </label>
+          <label>Repository
+            <input id="imageRepo" placeholder="DatabasengANIKANIK">
+          </label>
+          <label>Branch
+            <input id="imageBranch" placeholder="main">
+          </label>
+          <label>Folder (optional)
+            <input id="imageFolder" placeholder="e.g. images (leave blank for repo root)">
+          </label>
+        </div>
+
+        <div class="settings-col">
+          <h3>Data repository</h3>
+          <label>Owner
+            <input id="dataOwner" placeholder="reireis0033">
+          </label>
+          <label>Repository
+            <input id="dataRepo" placeholder="anikanik-admin">
+          </label>
+          <label>Branch
+            <input id="dataBranch" placeholder="main">
+          </label>
+          <label>JSON file path
+            <input id="dataPath" placeholder="data.json">
+          </label>
+        </div>
+      </div>
+
+      <div class="settings-actions">
+        <button type="button" id="saveSettingsBtn">Save settings</button>
+        <button type="button" id="closeSettingsBtn" class="secondary">Close</button>
+      </div>
+      <div id="settingsStatus" class="status"></div>
+    </div>
 
     <form id="uploadForm">
       <label class="dropzone" id="dropzone">
@@ -29,7 +87,7 @@
           <label><input type="radio" name="renameMode" value="custom"> Custom</label>
         </div>
         <input id="customName" name="customName" placeholder="e.g. persian-cat" disabled>
-        <small>Automatic names use 000001.webp, 000002.webp, etc.</small>
+        <small>Automatic names use 000001.webp, 000002.webp, etc. Images are converted to WebP on upload.</small>
       </div>
 
       <label>Title
@@ -74,7 +132,6 @@
       <button id="submitBtn" type="submit">UPLOAD IMAGE</button>
       <div id="status" class="status"></div>
     </form>
-
 
   </main>
   <script src="script.js"></script>
