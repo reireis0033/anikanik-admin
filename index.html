@@ -1,146 +1,186 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Reference — a calmer way to collect visual ideas</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="icon" type="image" href="https://sicervantesto12.github.io/Portfolio/Untitled147_20260713010744.png">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Repository</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Browser-style chrome bar: functional refresh button -->
-<div class="chrome">
-  <button class="chrome-btn burger-btn" id="burgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="burgerMenu">
-    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-    </svg>
-  </button>
-  <div class="chrome-url" id="urlBar">
-    <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5Zm-3 5a3 3 0 0 1 6 0v3H9V7Z" fill="currentColor"/></svg>
-    <span id="urlText">WWW.REIREI0033.INK</span>
-  </div>
-  <button class="chrome-btn" id="refreshBtn" aria-label="Refresh page">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12a8 8 0 0 1 13.66-5.66M20 12a8 8 0 0 1-13.66 5.66M4 4v5h5M20 20v-5h-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </button>
-</div>
-
-<div class="menu-overlay" id="menuOverlay"></div>
-<aside class="burger-menu" id="burgerMenu" aria-hidden="true">
-  <div class="burger-menu-head">
-    <span>MENU</span>
-    <button class="menu-close" id="menuClose" aria-label="Close menu">✕</button>
-  </div>
-  <nav class="burger-nav" aria-label="Main navigation">
-    <button class="burger-link" data-menu-action="home" type="button">
-      <span>01</span><strong>Home</strong>
-    </button>
-    <button class="burger-link" data-menu-action="items" type="button">
-      <span>02</span><strong>Items</strong>
-    </button>
-    <button class="burger-link" data-menu-action="information" type="button">
-      <span>03</span><strong>Information</strong>
-    </button>
-    <button class="burger-link" data-menu-action="contacts" type="button">
-      <span>04</span><strong>Contacts</strong>
-    </button>
-  </nav>
-</aside>
-
-<header>
-  <div class="header-inner">
-    <div class="row-top">
-      <div class="row-spacer" aria-hidden="true"></div>
-      <div class="logo"><img class="dot" src="https://sicervantesto12.github.io/Portfolio/Untitled147_20260713010717.png" alt="logo">Portfolio</div>
-
-      <div class="row-spacer" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="logo">
+      <span class="logo-dot"></span>
+      IMAGE REPO
     </div>
+    <div class="header-label">IMAGE UPLOAD SYSTEM</div>
+  </header>
 
-    <nav class="pills" aria-label="Filter by category" id="pills"></nav>
-  </div>
-</header>
+  <main class="container">
 
-<main id="itemsSection">
-  <aside class="filter-sidebar" id="filterSidebar" aria-label="Filter artwork">
-    <div class="filter-heading">
-      <span class="filter-kicker">FILTER</span>
-      <h2>Find your style</h2>
-    </div>
-    <div class="filter-section">
-      <div class="filter-section-head">
-        <h3>Categories</h3>
-        <button class="filter-clear" id="clearFilters" type="button">Clear</button>
+    <section class="upload-section">
+
+      <div class="section-heading">
+        <span class="eyebrow">REPOSITORY / 01</span>
+        <h1>Upload an image</h1>
+        <p>Add an image and provide its information.</p>
       </div>
-      <div class="filter-checklist" id="filterChecklist"></div>
-    </div>
-    <div class="filter-section" id="tagFilterSection">
-      <h3>Tags</h3>
-      <div class="filter-checklist" id="tagChecklist"></div>
-    </div>
-  </aside>
-  <div class="content-area">
-    <div class="grid" id="grid"></div>
-  <div class="empty" id="emptyState" style="display:none;">
-    <div class="glyph">”</div>
-    <h2>Nothing here yet</h2>
-    <p id="emptyText">No images in this category yet. Try a different filter, or refresh the website it to see everything again.</p>
-    <button id="resetBtn">Back to Home</button>
-  </div>
-</main>
 
-<div class="info-overlay" id="infoOverlay">
-  <div class="info-modal" role="dialog" aria-modal="true" aria-labelledby="infoTitle">
-    <button class="about-close" id="infoClose" aria-label="Close">✕</button>
-    <span class="filter-kicker">INFORMATION</span>
-    <h2 id="infoTitle">Reference</h2>
-    <p>Browse the portfolio by category or tag. Select an item to view it larger.</p>
-    <p class="info-note">Use the checklist on the left to combine category and tag filters.</p>
-  </div>
-</div>
+      <form id="uploadForm">
 
-<div class="about-overlay" id="aboutOverlay">
-  <div class="about-modal" role="dialog" aria-modal="true" aria-labelledby="aboutName">
-    <button class="about-close" id="aboutClose" aria-label="Close">✕</button>
-    <div class="about-avatar"><img src="https://sicervantesto12.github.io/Portfolio/pfp1.png" alt="pfp"></div>
-    <h2 id="aboutName">Rei-san</h2>
-    <p class="about-role">Illustrator</p>
-    <p class="about-bio">Coffee Addict with caution<br>NO CREAMER JUST STRAIGHT BLACK.</p>
-    <div class="about-contacts">
-      <a class="about-contact" href="mailto:reireisenpai@gmail.com">
-        Gmail| reireisenpai@Gmail.com
-      </a>
-      <a class="about-contact" href="https://discord.com/users/506481200408559627" target="_blank" rel="noopener">
-        Discord| rei-san
-      </a>
-      <a class="about-contact" href="https://facebook.com/reirei0033" target="_blank" rel="noopener">
-        Facebook| Rei san
-      </a>
-       <a class="about-contact" href="https://www.tiktok.com/@reirei0033?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener">
-        Tiktok| @reirei0033
-      </a>
-    </div>
-  </div>
-</div>
+        <div class="upload-layout">
 
-<div class="lightbox-overlay" id="lightboxOverlay">
-  <div class="lightbox-modal" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle">
-    <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
-    <div class="lightbox-image-wrap">
-      <img id="lightboxImg" src="" alt="">
-    </div>
-    <div class="lightbox-caption">
-      <p id="lightboxTitle"></p>
-      <span id="lightboxTag"></span>
-    </div>
-  </div>
-</div>
+          <!-- Image upload -->
+          <div class="upload-column">
+            <label class="field-label">Image file</label>
 
-<footer>Reference — a quieter place to collect what you notice.</footer>
+            <input
+              type="file"
+              id="imageFile"
+              accept="image/*"
+              hidden
+              required
+            >
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-<script src="script.js"></script>
+            <label for="imageFile" class="drop-zone" id="dropZone">
+              <div id="uploadPlaceholder">
+                <div class="upload-icon">↑</div>
+                <h2>Upload image</h2>
+                <p>Click to browse or drag and drop</p>
+                <span>JPG · PNG · WEBP</span>
+              </div>
 
+              <img id="imagePreview" alt="Image preview">
+            </label>
+
+            <p id="fileName" class="file-name"></p>
+
+            <button
+              type="button"
+              class="secondary-button"
+              id="removeImage"
+              hidden
+            >
+              Remove image
+            </button>
+          </div>
+
+          <!-- Image information -->
+          <div class="details-column">
+
+            <div class="form-group">
+              <label for="imageName">Filename</label>
+              <input
+                type="text"
+                id="imageName"
+                placeholder="image-name"
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="imageTitle">Title *</label>
+              <input
+                type="text"
+                id="imageTitle"
+                placeholder="Enter image title"
+                required
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="imageCategory">Category *</label>
+              <select id="imageCategory" required>
+                <option value="">Select category</option>
+                <option value="Nature">Nature</option>
+                <option value="People">People</option>
+                <option value="Animals">Animals</option>
+                <option value="Architecture">Architecture</option>
+                <option value="Illustration">Illustration</option>
+                <option value="Digital Art">Digital Art</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="imagePrice">Price metadata</label>
+              <input
+                type="number"
+                id="imagePrice"
+                min="0"
+                step="0.01"
+                placeholder="0.00"
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="imageDescription">Description *</label>
+              <textarea
+                id="imageDescription"
+                rows="5"
+                placeholder="Describe your image..."
+                required
+              ></textarea>
+            </div>
+
+            <p id="formMessage" class="form-message"></p>
+
+            <button type="submit" class="primary-button">
+              ↑ Upload to repository
+            </button>
+
+          </div>
+
+        </div>
+
+      </form>
+
+    </section>
+
+    <!-- Repository gallery -->
+    <section class="repository-section">
+
+      <div class="section-heading">
+        <span class="eyebrow">REPOSITORY / 02</span>
+        <h2>Your images</h2>
+        <p>Browse the images in your repository.</p>
+      </div>
+
+      <div class="repository-toolbar">
+        <input
+          type="search"
+          id="searchImages"
+          placeholder="Search images..."
+        >
+
+        <select id="filterCategory">
+          <option value="All">All categories</option>
+          <option value="Nature">Nature</option>
+          <option value="People">People</option>
+          <option value="Animals">Animals</option>
+          <option value="Architecture">Architecture</option>
+          <option value="Illustration">Illustration</option>
+          <option value="Digital Art">Digital Art</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div id="imageGallery" class="image-gallery">
+        <div class="empty-state">
+          <div class="empty-icon">✦</div>
+          <h3>No images yet</h3>
+          <p>Upload your first image to begin.</p>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    IMAGE REPOSITORY · UPLOAD AND ORGANIZE
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
