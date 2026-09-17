@@ -9,63 +9,6 @@
     "price": "35",
     "description": "Dimension Roaming Pack"
   },
-  {
-    "file": "2.jpg",
-    "title": "Cute Rabbit",
-    "cat": "Emotes",
-    "tags": [
-      "cute",
-      "animal"
-    ],
-    "price": "3",
-    "description": "fucking nigger"
-  },
-  {
-    "file": "3.jpg",
-    "title": "Cute Rabbit",
-    "cat": "Emotes",
-    "tags": [
-      "cute",
-      "animal"
-    ],
-    "price": "3",
-    "description": "zxdzxc"
-  },
-  {
-    "file": "4.jpg",
-    "title": "Cute Rabbit",
-    "cat": "Emotes",
-    "tags": [
-      "cute",
-      "animal"
-    ],
-    "price": "2",
-    "description": "zxczxc"
-  },
-  {
-    "file": "5.jpg",
-    "title": "Cute Rabbit",
-    "cat": "Emotes",
-    "tags": [
-      "cute",
-      "animal"
-    ],
-    "price": "1",
-    "description": "zxczxcxzc"
-  },
-  {
-    "filename": "12312312.webp",
-    "path": "12312312.webp",
-    "imageUrl": "https://raw.githubusercontent.com/reireis0033/DatabasengANIKANIK/main/12312312.webp",
-    "title": "asddasd",
-    "price": 2323,
-    "description": "wqeqwasdas",
-    "category": "Architecture",
-    "tags": [
-      "featured",
-      "new",
-      "premium"
-    ],
-    "uploadedAt": "2026-09-17T15:14:43.056Z"
-  }
+  { "file": "2.jpg", "title": "Cute Rabbit", "cat": "Emotes", "tags": ["cute","animal"], "price": "3", "description": "fucking nigger"}
+ 
 ]
