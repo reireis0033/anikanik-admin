@@ -155,27 +155,12 @@ function encodePath(path) {
   return path.split("/").map(encodeURIComponent).join("/");
 }
 
-function fileToWebp(file, quality = 0.85) {
-  return new Promise((resolve, reject) => {
-    const img = new Image();
-    img.onload = () => {
-      const canvas = document.createElement("canvas");
-      canvas.width = img.naturalWidth;
-      canvas.height = img.naturalHeight;
-      const ctx = canvas.getContext("2d");
-      ctx.drawImage(img, 0, 0);
-      canvas.toBlob(blob => {
-        URL.revokeObjectURL(img.src);
-        if (!blob) {
-          reject(new Error("This browser could not convert the image to WebP."));
-          return;
-        }
-        blob.arrayBuffer().then(resolve).catch(reject);
-      }, "image/webp", quality);
-    };
-    img.onerror = () => reject(new Error("Could not read the selected image."));
-    img.src = URL.createObjectURL(file);
-  });
+function getFileExtension(file) {
+  const match = /\.([a-z0-9]+)$/i.exec(file.name || "");
+  if (match) return match[1].toLowerCase();
+  // fallback: derive from MIME type, e.g. "image/jpeg" -> "jpeg"
+  const mimeMatch = /^image\/([a-z0-9.+-]+)$/i.exec(file.type || "");
+  return mimeMatch ? mimeMatch[1].toLowerCase() : "png";
 }
 
 // ---------- GitHub API ----------
@@ -279,7 +264,7 @@ async function appendProductToDataJson(settings, product) {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      message: `Add product ${product.filename}`,
+      message: `Add product ${product.file}`,
       content: utf8ToBase64(JSON.stringify(list, null, 2)),
       branch: settings.dataBranch,
       ...(sha ? { sha } : {}),
@@ -321,33 +306,31 @@ form.addEventListener("submit", async e => {
 
   submitBtn.disabled = true;
   try {
-    setStatus("Optimizing image...", "");
-    const webpBuffer = await fileToWebp(file);
+    setStatus("Reading image...", "");
+    const fileBuffer = await file.arrayBuffer();
+    const ext = getFileExtension(file);
 
     let filename;
     if (renameMode === "custom") {
       const custom = sanitizeCustomName(customName.value || title || "image");
-      filename = `${custom}.webp`;
+      filename = `${custom}.${ext}`;
     } else {
       setStatus("Checking existing files...", "");
       const nextNumber = await getNextAutomaticNumber(settings);
-      filename = `${String(nextNumber).padStart(6, "0")}.webp`;
+      filename = `${String(nextNumber).padStart(6, "0")}.${ext}`;
     }
 
     setStatus(`Uploading ${filename} to ${settings.imageRepo}...`, "");
-    const { path, rawUrl } = await uploadImageToGitHub(settings, filename, webpBuffer);
+    await uploadImageToGitHub(settings, filename, fileBuffer);
 
     setStatus("Saving product details to data.json...", "");
     const product = {
-      filename,
-      path,
-      imageUrl: rawUrl,
+      file: filename,
       title,
-      price: Number(price),
-      description,
-      category,
+      cat: category,
       tags: tagList,
-      uploadedAt: new Date().toISOString(),
+      price,
+      description,
     };
     await appendProductToDataJson(settings, product);
 
