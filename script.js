@@ -9,6 +9,8 @@ const statusBox = document.querySelector("#status");
 const submitBtn = document.querySelector("#submitBtn");
 const customName = document.querySelector("#customName");
 const nextName = document.querySelector("#nextName");
+const otherTagCheck = document.querySelector("#otherTagCheck");
+const otherTagInput = document.querySelector("#otherTagInput");
 
 const settingsBtn = document.querySelector("#settingsBtn");
 const settingsPanel = document.querySelector("#settingsPanel");
@@ -116,6 +118,25 @@ document.querySelectorAll('input[name="renameMode"]').forEach(radio => {
     nextName.textContent = custom ? "Custom" : "Automatic";
   });
 });
+
+otherTagCheck.addEventListener("change", () => {
+  const on = otherTagCheck.checked;
+  otherTagInput.hidden = !on;
+  otherTagInput.disabled = !on;
+  if (on) {
+    otherTagInput.focus();
+  } else {
+    otherTagInput.value = "";
+  }
+});
+
+function getOtherTags() {
+  if (!otherTagCheck.checked) return [];
+  return otherTagInput.value
+    .split(",")
+    .map(t => t.trim())
+    .filter(Boolean);
+}
 
 // ---------- helpers ----------
 
@@ -302,7 +323,7 @@ form.addEventListener("submit", async e => {
   const description = formData.get("description") || "";
   const category = formData.get("category");
   const tags = document.querySelectorAll('input[name="tags"]:checked');
-  const tagList = Array.from(tags).map(t => t.value);
+  const tagList = [...Array.from(tags).map(t => t.value), ...getOtherTags()];
 
   submitBtn.disabled = true;
   try {
@@ -340,6 +361,9 @@ form.addEventListener("submit", async e => {
     preview.style.display = "none";
     dropText.style.display = "block";
     nextName.textContent = "Automatic";
+    otherTagInput.hidden = true;
+    otherTagInput.disabled = true;
+    otherTagInput.value = "";
   } catch (error) {
     setStatus(`✕ ${error.message}`, "error");
   } finally {
