@@ -209,5 +209,16 @@
     ],
     "price": "75",
     "description": "Dimension Roaming Pack "
+  },
+  {
+    "file": "000013.jpg",
+    "title": "Ayaka Kamisato",
+    "cat": "Card",
+    "tags": [
+      "Game",
+      "Genshin Impact"
+    ],
+    "price": "50",
+    "description": "Dimension Roaming Pack "
   }
 ]
