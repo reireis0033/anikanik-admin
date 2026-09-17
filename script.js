@@ -6,8 +6,6 @@ const statusBox = document.querySelector("#status");
 const submitBtn = document.querySelector("#submitBtn");
 const customName = document.querySelector("#customName");
 const nextName = document.querySelector("#nextName");
-const productsBox = document.querySelector("#products");
-
 imageInput.addEventListener("change", () => {
   const file = imageInput.files[0];
   if (!file) return;
@@ -44,7 +42,6 @@ form.addEventListener("submit", async e => {
     preview.style.display = "none";
     dropText.style.display = "block";
     nextName.textContent = "Automatic";
-    loadProducts();
   } catch (error) {
     statusBox.textContent = `✕ ${error.message}`;
   } finally {
@@ -52,25 +49,8 @@ form.addEventListener("submit", async e => {
   }
 });
 
-async function loadProducts() {
-  const products = await fetch("/api/products").then(r => r.json());
-  productsBox.innerHTML = products.length ? products.slice().reverse().map(p => `
-    <article class="product">
-      <img src="/${p.image}" alt="">
-      <div class="info">
-        <strong>#${p.id} · ${escapeHtml(p.filename)} · ₱${Number(p.price).toLocaleString()}</strong>
-        <p>${escapeHtml(p.description || "No description")}</p>
-        <div class="tags">${escapeHtml(p.category || "Uncategorized")} · ${(p.tags || []).map(escapeHtml).join(", ")}</div>
-      </div>
-    </article>
-  `).join("") : `<p class="muted">No images yet.</p>`;
-}
-
 function escapeHtml(value) {
   return String(value).replace(/[&<>"']/g, c => ({
     "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#039;"
   }[c]));
 }
-
-document.querySelector("#refreshBtn").addEventListener("click", loadProducts);
-loadProducts();
