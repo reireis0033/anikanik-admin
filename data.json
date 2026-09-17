@@ -1,14 +1,10 @@
 [
-  {
-    "file": "1.jpg",
-    "title": "Acheron",
-    "cat": "Card",
-    "tags": [
-      "Game","Chix","Honkai Star rail"
-    ],
-    "price": "35",
-    "description": "Dimension Roaming Pack"
-  },
-  { "file": "2.jpg", "title": "Cute Rabbit", "cat": "Emotes", "tags": ["cute","animal"], "price": "3", "description": "fucking nigger"}
+  {"file": "1.jpg","title": "Acheron","cat": "Card","tags": ["Game","Chix","Honkai Star rail"],"price": "35","description": "Dimension Roaming Pack"},
+  {"file": "2.jpg","title": "Himeko","cat": "Card","tags": ["Game","Chix","Honkai Star rail"],"price": "35","description": "Dimension Roaming Pack"},
+  {"file": "3.jpg","title": "Kafka","cat": "Card","tags": ["Game","Chix","Honkai Star rail"],"price": "35","description": "Dimension Roaming Pack"},
+  {"file": "4.jpg","title": "Zero Two","cat": "Topper","tags": ["Anime","Chix","NSFW"],"price": "50","description": "Dimension Roaming Pack"},
+  {"file": "5.jpg","title": "Mernie","cat": "Card","tags": ["Pokemon","Chix","NSFW","Anime"],"price": "40","description": "Dimension Roaming Pack"},
+  {"file": "6.jpg","title": "Herta","cat": "Card","tags": ["Game","Chix","Honkai Star rail","NSFW"],"price": "50","description": "Dimension Roaming Pack"},
+  { "file": "27.jpg", "title": "Cute Rabbit", "cat": "Emotes", "tags": ["cute","animal"], "price": "3", "description": "fucking nigger"}
  
 ]
