@@ -117,6 +117,7 @@
     "cat": "Pin",
     "tags": [
       "Anime",
+      "Apothecary Diaries",
       "Chix"
     ],
     "price": "10",
@@ -131,6 +132,7 @@
       "Game",
       "NSFW",
       "Chix"
+      "Blue Archive"
     ],
     "price": "35",
     "description": "Dimension Roaming Pack"
@@ -142,7 +144,8 @@
     "tags": [
       "Anime",
       "Game",
-      "Chix"
+      "Chix",
+      "Blue Archive"
     ],
     "price": "35",
     "description": "Dimension Roaming Pack"
@@ -153,7 +156,8 @@
     "cat": "Card",
     "tags": [
       "Anime",
-      "Chix"
+      "Chix",
+      "Bleach"
     ],
     "price": "35",
     "description": "Dimension Roaming Pack"
