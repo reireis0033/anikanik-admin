@@ -122,5 +122,16 @@
     ],
     "price": "20",
     "description": "bading na renzo"
+  },
+  {
+    "file": "000004.jpg",
+    "title": "Maomao",
+    "cat": "Pin",
+    "tags": [
+      "Anime",
+      "Chix"
+    ],
+    "price": "10",
+    "description": "Custom Made"
   }
 ]
