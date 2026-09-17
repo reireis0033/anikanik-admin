@@ -125,5 +125,21 @@
       "Chix"
     ],
     "uploadedAt": "2026-09-17T17:57:02.893Z"
+  },
+  {
+    "filename": "000002.webp",
+    "path": "000002.webp",
+    "imageUrl": "https://raw.githubusercontent.com/reireis0033/DatabasengANIKANIK/main/000002.webp",
+    "title": "Laevatain",
+    "price": 20,
+    "description": "Dimension Roaming Pack",
+    "category": "Card",
+    "tags": [
+      "Anime",
+      "Game",
+      "NSFW",
+      "Arknight"
+    ],
+    "uploadedAt": "2026-09-17T18:02:07.900Z"
   }
 ]
