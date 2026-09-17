@@ -146,5 +146,17 @@
     ],
     "price": "35",
     "description": "Dimension Roaming "
+  },
+  {
+    "file": "000006.jpg",
+    "title": "Shiroko",
+    "cat": "Card",
+    "tags": [
+      "Anime",
+      "Game",
+      "Chix"
+    ],
+    "price": "35",
+    "description": "Dimension Roaming "
   }
 ]
