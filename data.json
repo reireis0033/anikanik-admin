@@ -161,5 +161,17 @@
     ],
     "price": "35",
     "description": "Dimension Roaming Pack"
+  },
+  {
+    "file": "000009.jpg",
+    "title": "Ganyu & Hutao",
+    "cat": "Card",
+    "tags": [
+      "Game",
+      "NSFW",
+      "Genshin Impact"
+    ],
+    "price": "50",
+    "description": "Dimension Roaming Pack "
   }
 ]
