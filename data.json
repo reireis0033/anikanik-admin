@@ -220,5 +220,16 @@
     ],
     "price": "50",
     "description": "Dimension Roaming Pack "
+  },
+  {
+    "file": "000014.jpg",
+    "title": "Hutao",
+    "cat": "Card",
+    "tags": [
+      "Game",
+      "Genshin Impact"
+    ],
+    "price": "35",
+    "description": "Dimension Roaming Pack "
   }
 ]
