@@ -1,43 +1,91 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Image Repository</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Repository Uploader</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header><div class="logo"><i></i> IMAGE REPO</div><span>UPLOAD CENTER</span></header>
-<main>
-<section class="panel">
-<p class="eyebrow">REPOSITORY / 01</p>
-<h1>Upload an image</h1>
-<p class="intro">Upload an image and add its information to your repository.</p>
-<form id="form">
-<div class="layout">
-<div>
-<label>Image file</label>
-<input id="file" type="file" accept="image/*" hidden required>
-<label for="file" class="drop" id="drop">
-<div id="placeholder"><strong>↑</strong><h2>Choose image</h2><p>Click to browse or drag and drop</p><small>JPG · PNG · WEBP</small></div>
-<img id="preview" alt="Preview">
-</label>
-<p id="chosen"></p>
-</div>
-<div>
-<label for="filename">Filename</label><input id="filename" placeholder="image-name">
-<label for="title">Title *</label><input id="title" required placeholder="Image title">
-<label for="category">Category *</label><select id="category" required><option value="">Select category</option><option>Nature</option><option>People</option><option>Animals</option><option>Architecture</option><option>Illustration</option><option>Digital Art</option><option>Other</option></select>
-<label for="price">Price metadata</label><input id="price" type="number" min="0" step=".01" placeholder="0.00">
-<label for="description">Description *</label><textarea id="description" required rows="5" placeholder="Describe your image..."></textarea>
-<p id="message"></p><button>↑ Upload to repository</button>
-</div>
-</div>
-</form>
-</section>
-<section><p class="eyebrow">REPOSITORY / 02</p><h2>Your images</h2><div class="toolbar"><input id="search" placeholder="Search images..."><select id="filter"><option>All</option><option>Nature</option><option>People</option><option>Animals</option><option>Architecture</option><option>Illustration</option><option>Digital Art</option><option>Other</option></select></div><div id="gallery" class="gallery"></div></section>
-</main>
-<footer>IMAGE REPOSITORY · UPLOAD AND ORGANIZE</footer>
-<script src="script.js"></script>
+  <main class="container">
+    <div class="eyebrow">ADMIN UPLOADER</div>
+    <h1>Add Image</h1>
+    <p class="muted">Upload, rename, and save an image to your repository.</p>
+
+    <form id="uploadForm">
+      <label class="dropzone" id="dropzone">
+        <input id="image" name="image" type="file" accept="image/*" required>
+        <div id="dropText">📷 Choose an image</div>
+        <img id="preview" alt="Preview">
+      </label>
+
+      <div class="rename-box">
+        <div class="row-between">
+          <label>Filename</label>
+          <span id="nextName" class="pill">Automatic</span>
+        </div>
+        <div class="radio-row">
+          <label><input type="radio" name="renameMode" value="automatic" checked> Automatic</label>
+          <label><input type="radio" name="renameMode" value="custom"> Custom</label>
+        </div>
+        <input id="customName" name="customName" placeholder="e.g. persian-cat" disabled>
+        <small>Automatic names use 000001.webp, 000002.webp, etc.</small>
+      </div>
+
+      <label>Title
+        <input name="title" placeholder="Enter image title" required>
+      </label>
+
+      <label>Price
+        <input name="price" type="number" min="0" step="0.01" placeholder="150" required>
+      </label>
+
+      <label>Description
+        <textarea name="description" rows="4" placeholder="Describe the image"></textarea>
+      </label>
+
+      <label>Category
+        <select name="category" required>
+          <option value="" selected disabled>Select a category</option>
+          <option value="Animals">Animals</option>
+          <option value="Nature">Nature</option>
+          <option value="People">People</option>
+          <option value="Technology">Technology</option>
+          <option value="Travel">Travel</option>
+          <option value="Food">Food</option>
+          <option value="Architecture">Architecture</option>
+          <option value="Abstract">Abstract</option>
+          <option value="Other">Other</option>
+        </select>
+      </label>
+
+      <fieldset class="tags-field">
+        <legend>Tags</legend>
+        <div class="checklist">
+          <label><input type="checkbox" name="tags" value="featured"> Featured</label>
+          <label><input type="checkbox" name="tags" value="popular"> Popular</label>
+          <label><input type="checkbox" name="tags" value="new"> New</label>
+          <label><input type="checkbox" name="tags" value="free"> Free</label>
+          <label><input type="checkbox" name="tags" value="premium"> Premium</label>
+          <label><input type="checkbox" name="tags" value="high-resolution"> High resolution</label>
+        </div>
+      </fieldset>
+
+      <button id="submitBtn" type="submit">UPLOAD IMAGE</button>
+      <div id="status" class="status"></div>
+    </form>
+
+    <section class="products-section">
+      <div class="row-between">
+        <div>
+          <div class="eyebrow">LOCAL REPOSITORY</div>
+          <h2>Images</h2>
+        </div>
+        <button id="refreshBtn" class="secondary" type="button">Refresh</button>
+      </div>
+      <div id="products" class="products"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
 </body>
 </html>
