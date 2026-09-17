@@ -1,12 +1,126 @@
 [
-  {"file": "1.jpg","title": "Acheron","cat": "Card","tags": ["Game","Chix","Honkai Star rail"],"price": "35","description": "Dimension Roaming Pack"},
-  {"file": "2.jpg","title": "Himeko","cat": "Card","tags": ["Game","Chix","Honkai Star rail"],"price": "35","description": "Dimension Roaming Pack"},
-  {"file": "3.jpg","title": "Kafka","cat": "Card","tags": ["Game","Chix","Honkai Star rail"],"price": "35","description": "Dimension Roaming Pack"},
-  {"file": "4.jpg","title": "Zero Two","cat": "Topper","tags": ["Anime","Chix","NSFW"],"price": "50","description": "Dimension Roaming Pack"},
-  {"file": "5.jpg","title": "Mernie","cat": "Card","tags": ["Pokemon","Chix","NSFW","Anime"],"price": "40","description": "Dimension Roaming Pack"},
-  {"file": "6.jpg","title": "Herta","cat": "Card","tags": ["Game","Chix","Honkai Star rail","NSFW"],"price": "50","description": "Dimension Roaming Pack"},
-  {"file": "7.jpg","title": "Nami","cat": "Card","tags": ["Anime","Chix","NSFW","One Piece"],"price": "20","description": "Dimension Roaming Pack"},
-  {"file": "9.jpg","title": "Perona","cat": "Card","tags": ["One Piece","Chix","NSFW","Anime"],"price": "20","description": "Dimension Roaming Pack"},
-  { "file": "10.jpg", "title": "Nami", "cat": "Card", "tags": ["NSFW","Chix","Anime"], "price": "20", "description": "Dimension Roaming Pack"}
- 
+  {
+    "file": "1.jpg",
+    "title": "Acheron",
+    "cat": "Card",
+    "tags": [
+      "Game",
+      "Chix",
+      "Honkai Star rail"
+    ],
+    "price": "35",
+    "description": "Dimension Roaming Pack"
+  },
+  {
+    "file": "2.jpg",
+    "title": "Himeko",
+    "cat": "Card",
+    "tags": [
+      "Game",
+      "Chix",
+      "Honkai Star rail"
+    ],
+    "price": "35",
+    "description": "Dimension Roaming Pack"
+  },
+  {
+    "file": "3.jpg",
+    "title": "Kafka",
+    "cat": "Card",
+    "tags": [
+      "Game",
+      "Chix",
+      "Honkai Star rail"
+    ],
+    "price": "35",
+    "description": "Dimension Roaming Pack"
+  },
+  {
+    "file": "4.jpg",
+    "title": "Zero Two",
+    "cat": "Topper",
+    "tags": [
+      "Anime",
+      "Chix",
+      "NSFW"
+    ],
+    "price": "50",
+    "description": "Dimension Roaming Pack"
+  },
+  {
+    "file": "5.jpg",
+    "title": "Mernie",
+    "cat": "Card",
+    "tags": [
+      "Pokemon",
+      "Chix",
+      "NSFW",
+      "Anime"
+    ],
+    "price": "40",
+    "description": "Dimension Roaming Pack"
+  },
+  {
+    "file": "6.jpg",
+    "title": "Herta",
+    "cat": "Card",
+    "tags": [
+      "Game",
+      "Chix",
+      "Honkai Star rail",
+      "NSFW"
+    ],
+    "price": "50",
+    "description": "Dimension Roaming Pack"
+  },
+  {
+    "file": "7.jpg",
+    "title": "Nami",
+    "cat": "Card",
+    "tags": [
+      "Anime",
+      "Chix",
+      "NSFW",
+      "One Piece"
+    ],
+    "price": "20",
+    "description": "Dimension Roaming Pack"
+  },
+  {
+    "file": "9.jpg",
+    "title": "Perona",
+    "cat": "Card",
+    "tags": [
+      "One Piece",
+      "Chix",
+      "NSFW",
+      "Anime"
+    ],
+    "price": "20",
+    "description": "Dimension Roaming Pack"
+  },
+  {
+    "file": "10.jpg",
+    "title": "Nami",
+    "cat": "Card",
+    "tags": [
+      "NSFW",
+      "Chix",
+      "Anime"
+    ],
+    "price": "20",
+    "description": "Dimension Roaming Pack"
+  },
+  {
+    "file": "000003.webp",
+    "title": "renzp",
+    "cat": "Other",
+    "tags": [
+      "Anime",
+      "NSFW",
+      "Zenless Zone Zero"
+    ],
+    "price": "20",
+    "description": "bading na renzo"
+  }
 ]
