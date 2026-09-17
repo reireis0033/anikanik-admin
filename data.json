@@ -173,5 +173,17 @@
     ],
     "price": "50",
     "description": "Dimension Roaming Pack "
+  },
+  {
+    "file": "000010.jpg",
+    "title": "Yae Miko",
+    "cat": "Card",
+    "tags": [
+      "Game",
+      "NSFW",
+      "Genshin Impact"
+    ],
+    "price": "35",
+    "description": "Roaming Dimension Pack"
   }
 ]
