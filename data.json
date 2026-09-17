@@ -158,5 +158,16 @@
     ],
     "price": "35",
     "description": "Dimension Roaming "
+  },
+  {
+    "file": "000007.jpg",
+    "title": "Rukia",
+    "cat": "Card",
+    "tags": [
+      "Anime",
+      "Chix"
+    ],
+    "price": "35",
+    "description": "Dimension Roaming Pack"
   }
 ]
