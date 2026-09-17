@@ -185,5 +185,17 @@
     ],
     "price": "35",
     "description": "Roaming Dimension Pack"
+  },
+  {
+    "file": "000011.jpg",
+    "title": "Yoimiya",
+    "cat": "Card",
+    "tags": [
+      "Game",
+      "NSFW",
+      "Genshin Impact"
+    ],
+    "price": "75",
+    "description": "Dimension Roaming Pack "
   }
 ]
