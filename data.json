@@ -728,5 +728,18 @@
     ],
     "price": "30",
     "description": "Dimension Roaming Pack"
+  },
+  {
+    "file": "000056.jpg",
+    "title": "Bulma",
+    "cat": "Card",
+    "tags": [
+      "Anime",
+      "NSFW",
+      "Chix",
+      "Dragon Ball"
+    ],
+    "price": "75",
+    "description": "Dimension Roaming Pack"
   }
 ]
