@@ -692,5 +692,17 @@
     ],
     "price": "30",
     "description": "Dimension Roaming Pack"
+  },
+  {
+    "file": "000053.jpg",
+    "title": "Hiyuki",
+    "cat": "Card",
+    "tags": [
+      "Game",
+      "Chix",
+      "Wuthering Wave"
+    ],
+    "price": "35",
+    "description": "Dimension Roaming Pack"
   }
 ]
