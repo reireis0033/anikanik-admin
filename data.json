@@ -640,5 +640,18 @@
     ],
     "price": "35",
     "description": "Dimension Roaming Pack"
+  },
+  {
+    "file": "000049.jpg",
+    "title": "Alice Polaroid",
+    "cat": "Card",
+    "tags": [
+      "Game",
+      "NSFW",
+      "Zenless Zone Zero",
+      "Chix"
+    ],
+    "price": "30",
+    "description": "Dimension Roaming Pack"
   }
 ]
