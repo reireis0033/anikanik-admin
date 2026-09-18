@@ -716,5 +716,17 @@
     ],
     "price": "35",
     "description": "Dimension Roaming Pack"
+  },
+  {
+    "file": "000055.jpg",
+    "title": "Shirahoshi",
+    "cat": "Card",
+    "tags": [
+      "Anime",
+      "One Piece",
+      "Chix"
+    ],
+    "price": "30",
+    "description": "Dimension Roaming Pack"
   }
 ]
