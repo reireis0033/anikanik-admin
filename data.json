@@ -780,5 +780,18 @@
     ],
     "price": "35",
     "description": "Dimension Roaming Pack"
+  },
+  {
+    "file": "000060.jpg",
+    "title": "Asuna Polaroid",
+    "cat": "Card",
+    "tags": [
+      "Anime",
+      "NSFW",
+      "Chix",
+      "Sword Art Online"
+    ],
+    "price": "30",
+    "description": "Dimension Roaming Pack"
   }
 ]
