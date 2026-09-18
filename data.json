@@ -679,5 +679,18 @@
     ],
     "price": "100",
     "description": "Dimension Roaming Pack"
+  },
+  {
+    "file": "000052.jpg",
+    "title": "Samui Polaroid",
+    "cat": "Card",
+    "tags": [
+      "Anime",
+      "NSFW",
+      "Chix",
+      "Naruto"
+    ],
+    "price": "30",
+    "description": "Dimension Roaming Pack"
   }
 ]
