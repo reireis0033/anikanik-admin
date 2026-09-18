@@ -629,5 +629,17 @@
     ],
     "price": "20",
     "description": "Dimension Roaming Pack"
+  },
+  {
+    "file": "000047.jpg",
+    "title": "Yuki",
+    "cat": "Card",
+    "tags": [
+      "Anime",
+      "Chix",
+      "Jujutsu Kaisen"
+    ],
+    "price": "35",
+    "description": "Dimension Roaming Pack"
   }
 ]
